@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 
 def cool(x, e, o): 
     result = []
@@ -13,4 +14,9 @@ def cool(x, e, o):
         result.append(x) 
     return result
 
-print(cool(50,2,3))
+y = cool(100,2,3)
+x = range(0,len(y))
+plt.xlabel('Iteration')
+plt.ylabel('Value')
+plt.plot(x,y)
+plt.show()
