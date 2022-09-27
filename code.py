@@ -7,9 +7,9 @@ def cool(x):
         else:
             x = (x*3)+1
         
-        if x == 1:
+        if x in result: #breaks the loop when numbers start repeating
             cooling = False
-        result.append(int(x))
+        result.append(int(x)) 
     return result
 
 print(cool(50))
