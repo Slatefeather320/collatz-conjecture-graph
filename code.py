@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def cool(x, e, o): 
+def cool(x, e, o): #user can define what happens when the number is odd or even (devide by 2 and multiply by 3 by default)
     result = []
     cooling = True
     while cooling:
@@ -12,11 +12,11 @@ def cool(x, e, o):
         if x in result: #breaks the loop when numbers start repeating
             cooling = False
         result.append(x) 
-    return result
+    gy = result
+    gx = range(0,len(gy))
+    plt.plot(gx, gy)
+    plt.xlabel('Iteration')
+    plt.ylabel('Value')
+    plt.show()
 
-y = cool(100,2,3)
-x = range(0,len(y))
-plt.xlabel('Iteration')
-plt.ylabel('Value')
-plt.plot(x,y)
-plt.show()
+cool(100,2,3) #put whatever number you want to generate a graph of here. 
